@@ -1,0 +1,11 @@
+version: '3.8dc'
+
+services:
+  anchor:    
+    build:
+      context: ./anchor
+      args:
+        - SOLANA_CLI=stable
+        - ANCHOR_CLI=v0.25.0
+    volumes:
+      - ./anchor:/workdir
